@@ -22,6 +22,7 @@ function App() {
           <Route path="/create" element={<CreatePost />} />
           <Route path="/post/:id" element={<PostPage />} />
           <Route path="/edit/:id" element={<EditPost />} />
+          <Route path="*" element={<h1>404</h1>} />
         </Route>
       </Routes>
     </UserContextProvider>
