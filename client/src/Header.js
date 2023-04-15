@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
+import { AiOutlineSearch } from "react-icons/ai";
 import { UserContext } from "./UserContext";
 
-export default function Header() {
+export default function Header({ search, setSearch }) {
   const { setUserInfo, userInfo } = useContext(UserContext);
   useEffect(() => {
     fetch('http://localhost:4000/profile', {
@@ -23,7 +24,6 @@ export default function Header() {
   }
 
   const username = userInfo?.username;
-  const [some, setSome] = useState('');
 
   return (
     <header>
@@ -50,6 +50,11 @@ export default function Header() {
             ) : (
               <>
                 <div className="flex flex-row gap-4">
+                  <div className="relative">
+                    <AiOutlineSearch className="text-primary absolute top-4 left-4" />
+                    <input type="text" className="bg-white h-full text-primary w-full px-12 rounded-lg focus:outline-none hover:cursor-pointer" value={search} onChange={(e) => setSearch(e.target.value)} />
+                  </div>
+
                   <Link to="/login" className="relative rounded px-5 py-2.5 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                     <span className="relative">Login</span>
