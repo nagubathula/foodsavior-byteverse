@@ -29,10 +29,40 @@ export default function LoginPage() {
     return <Navigate to={"/"} />;
   }
   return (
-    <form className="login bg-support h-screen" onSubmit={login}>
-      <div className="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-        <div className="w-full max-w-md space-y-8 drop-shadow-2xl bg-white bg-opacity-50 backdrop-blur-md border-2 p-10 z-5 rounded-2xl">
-          
+    <form className="login  " onSubmit={login}>
+      <div class="absolute  inset-0 h-screen overflow-hidden bg-support">
+        <svg
+          class="absolute  opacity-50 top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-primary [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width="200"
+              height="200"
+              x="50%"
+              y="-1"
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="100%" y="-1">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              stroke-width="0"
+            />
+          </svg>
+          <rect
+            width="100%"
+            height="100%"
+            stroke-width="0"
+            fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"
+          />
+        </svg>
+      </div>
+      <div className="flex min-h-full  items-center justify-center px-4 py-12 sm:px-6 lg:px-8 drop-shadow-[0_0px_90px_rgba(207,77,114,0.35)]">
+        <div className="w-full max-w-md space-y-8 drop-shadow-[_30px_40px_rgba(207,77,114,0.15)] mt-24 bg-white bg-opacity-70 backdrop-blur-sm border-2 p-10  rounded-2xl">
           <div>
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-primary">
               Login
@@ -57,7 +87,7 @@ export default function LoginPage() {
                 onChange={(ev) => setUsername(ev.target.value)}
                 autoComplete="username"
                 required
-                className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
               />
             </div>
             <div>
@@ -71,12 +101,12 @@ export default function LoginPage() {
                 onChange={(ev) => setPassword(ev.target.value)}
                 autoComplete="current-password"
                 required
-                className="relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
               />
             </div>
           </div>
 
-          <div className="flex items-center justify-end">
+          {/* <div className="flex items-center justify-end">
             <div className="text-sm">
               <a
                 href="#"
@@ -85,7 +115,7 @@ export default function LoginPage() {
                 Forgot your password?
               </a>
             </div>
-          </div>
+          </div> */}
           <div>
             <button
               type="submit"

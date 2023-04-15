@@ -20,7 +20,7 @@ export default function Post({
       <div class="max-w-sm rounded-2xl overflow-hidden shadow-lg mx-auto my-3 ">
         <div className="image">
           <Link to={`/post/${_id}`}>
-            <img src={"http://localhost:4000/" + cover} alt="" />
+            <img src={"http://localhost:4000/" + cover} alt=""  className="h-64 mx-auto"/>
           </Link>
         </div>
         <div class="px-6 py-4">
