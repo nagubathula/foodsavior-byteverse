@@ -11,7 +11,6 @@ export default function IndexPage({ searchTerm }) {
     });
   }, []);
 
-  console.log(posts);
   return (
     <>
       {posts.length > 0 &&
