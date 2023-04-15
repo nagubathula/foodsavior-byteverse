@@ -26,7 +26,7 @@ export default function Header({ search, setSearch }) {
   const username = userInfo?.username;
 
   return (
-    <header>
+    <header className="sticky top-0">
       <nav className="bg-primary">
         <div className="max-w-screen-xl flex flex-wrap items-center text-white justify-between mx-auto p-4">
           <Link to="/" className="flex items-center">
