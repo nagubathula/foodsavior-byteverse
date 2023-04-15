@@ -1,7 +1,7 @@
 import Post from "../Post";
 import { useEffect, useState } from "react";
 
-export default function IndexPage() {
+export default function IndexPage({ searchTerm }) {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     fetch("http://localhost:4000/post").then((response) => {
@@ -78,7 +78,11 @@ export default function IndexPage() {
               RECIPIES
             </h1>
             <div className=" flex grid grid-cols-3">
-              {posts.length > 0 && posts.map((post) => <Post {...post} />)}
+              {posts.length > 0 &&
+                posts
+                  .filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()))
+                  .map((post) => <Post {...post} />)
+              }
             </div>
           </div>
         </div>
