@@ -89,15 +89,41 @@ export default function IndexPage({ searchTerm }) {
           </div>
         </div>
         {/* Page title ends */}
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 ">
           <div className="w-full h-64 rounded border-dashed border-2 border-gray-300">
             <div className="flex flex-col items-center justify-center h-full">
-              <div className="absolute -mt-20 w-full flex justify-center">
+              <div className="absolute -mt-20 w-full flex justify-center ">
                 <div>
                   <div className="h-32 w-32 drop-shadow-md">
-                    <img
-                      src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
-                      alt
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
+                      className="rounded-full object-cover h-full w-full shadow-md"
+                    />
+                  </div>
+                  <p>aloo fry</p>
+                </div>
+                <div>
+                  <div className="h-32 w-32 drop-shadow-md">
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
+                      className="rounded-full object-cover h-full w-full shadow-md"
+                    />
+                  </div>
+                  <p>aloo fry</p>
+                </div>
+                <div>
+                  <div className="h-32 w-32 drop-shadow-md">
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
+                      className="rounded-full object-cover h-full w-full shadow-md"
+                    />
+                  </div>
+                  <p>aloo fry</p>
+                </div>
+                <div>
+                  <div className="h-32 w-32 drop-shadow-md">
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
                       className="rounded-full object-cover h-full w-full shadow-md"
                     />
                   </div>
@@ -108,11 +134,11 @@ export default function IndexPage({ searchTerm }) {
           </div>
         </div>
         <div>
-          <div className="flex flex-col">
+          <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col items-center justify-between pb-4 border-b border-gray-300">
             <h1 className="text-primary text-4xl font-bold flex justify-center mt-10 lg:mt-24 lg:mb-5">
               RECIPIES
             </h1>
-            <div className=" flex grid grid-cols-3">
+            <div className=" flex grid grid-cols-3 gap-2">
               {posts.length > 0 &&
                 posts
                   .filter((post) =>
