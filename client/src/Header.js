@@ -36,7 +36,7 @@ export default function Header() {
         )}
         {!username && (
           <>
-            <Link to="/login">Login</Link>
+            <Link to="/login" className="bg-red-500">Login</Link>
             <Link to="/register">Register</Link>
           </>
         )}
