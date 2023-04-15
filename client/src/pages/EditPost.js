@@ -105,30 +105,28 @@ export default function EditPost() {
               Character Limit: 200
             </p>
           </div>
-          <br />
           <div className="mt-8 flex flex-col xl:w-3/5 lg:w-1/2 md:w-1/2 w-full">
-          <label
+            <label
               htmlFor="description"
               className="pb-2 text-sm font-bold text-gray-800"
             >
               Insert Image
             </label>
-          <input
-            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
-            type="file"
-            onChange={(ev) => setFiles(ev.target.files)}
-          />
+            <input
+              class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
+              type="file"
+              onChange={(ev) => setFiles(ev.target.files)}
+            />
           </div>
           <div className="mt-8 flex flex-col xl:w-3/5 lg:w-1/2 md:w-1/2 w-full">
-          <label
+            <label
               htmlFor="description"
               className="pb-2 text-sm font-bold text-gray-800"
             >
               Edit Content
             </label>
             <Editor onChange={setContent} value={content} />
-            </div>
-          
+          </div>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             style={{ marginTop: "5px" }}
