@@ -49,6 +49,8 @@ export default function EditPost() {
   }
 
   return (
+    <main>
+    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
     <form onSubmit={updatePost}>
       <input type="title"
              placeholder={'Title'}
@@ -69,5 +71,8 @@ export default function EditPost() {
       <Editor onChange={setContent} value={content} />
       <button style={{marginTop:'5px'}}>Update post</button>
     </form>
+    </div>
+  </main>
+    
   );
 }

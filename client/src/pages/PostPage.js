@@ -22,9 +22,9 @@ export default function PostPage() {
     <main>
       <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <div className="post-page">
-          <h1 className="font-bold">{postInfo.title}</h1>
+          <h1 className="font-bold text-3xl">{postInfo.title}</h1>
           <time>{formatISO9075(new Date(postInfo.createdAt))}</time>
-          <div className="author">by @{postInfo.author.username}</div>
+          <div className="author">By <span className="font-semibold">{postInfo.author.username}</span></div>
           {userInfo.id === postInfo.author._id && (
             <div className="edit-row">
               <Link className="edit-btn" to={`/edit/${postInfo._id}`}>
