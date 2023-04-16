@@ -72,17 +72,79 @@ export default function IndexPage({ searchTerm }) {
             </div>
           </section>
         </div>
+        {/* Page title starts */}
+        <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between pb-4 border-b border-gray-300">
+          <div>
+            <h4 className="text-2xl font-bold leading-tight text-primary">
+              Famous Recipies
+            </h4>
+          </div>
+          <div className="mt-6 lg:mt-0">
+            <button className="mx-2 my-2 bg-white transition duration-150 ease-in-out focus:outline-none hover:bg-gray-100 rounded text-indigo-700 px-6 py-2 text-sm">
+              Back
+            </button>
+            <button className="transition duration-150 ease-in-out hover:bg-indigo-600 focus:outline-none border bg-indigo-700 rounded text-white px-8 py-2 text-sm">
+              Edit Profile
+            </button>
+          </div>
+        </div>
+        {/* Page title ends */}
+        <div className="container mx-auto px-6 ">
+          <div className="w-full h-64 rounded border-dashed border-2 border-gray-300">
+            <div className="flex flex-col items-center justify-center h-full">
+              <div className="absolute -mt-20 w-full flex justify-center ">
+                <div>
+                  <div className="h-32 w-32 drop-shadow-md">
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
+                      className="rounded-full object-cover h-full w-full shadow-md"
+                    />
+                  </div>
+                  <p>aloo fry</p>
+                </div>
+                <div>
+                  <div className="h-32 w-32 drop-shadow-md">
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
+                      className="rounded-full object-cover h-full w-full shadow-md"
+                    />
+                  </div>
+                  <p>aloo fry</p>
+                </div>
+                <div>
+                  <div className="h-32 w-32 drop-shadow-md">
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
+                      className="rounded-full object-cover h-full w-full shadow-md"
+                    />
+                  </div>
+                  <p>aloo fry</p>
+                </div>
+                <div>
+                  <div className="h-32 w-32 drop-shadow-md">
+                    <img src="https://res.cloudinary.com/dhybspk1v/image/upload/v1671397777/samples/food/pot-mussels.jpg"
+                      alt="aloo fry"
+                      className="rounded-full object-cover h-full w-full shadow-md"
+                    />
+                  </div>
+                  <p>aloo fry</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div>
-          <div className="flex flex-col">
-            <h1 className="text-primary text-4xl  flex justify-center mt-10 lg:mt-24 lg:mb-5">
+          <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col items-center justify-between pb-4 border-b border-gray-300">
+            <h1 className="text-primary text-4xl font-bold flex justify-center mt-10 lg:mt-24 lg:mb-5">
               RECIPIES
             </h1>
-            <div className=" flex grid grid-cols-3">
+            <div className=" flex grid grid-cols-3 gap-2">
               {posts.length > 0 &&
                 posts
-                  .filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()))
-                  .map((post) => <Post {...post} />)
-              }
+                  .filter((post) =>
+                    post.title.toLowerCase().includes(searchTerm.toLowerCase())
+                  )
+                  .map((post) => <Post {...post} />)}
             </div>
           </div>
         </div>
