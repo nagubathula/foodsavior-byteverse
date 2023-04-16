@@ -78,13 +78,14 @@ export default function PostPage() {
 
           <div className="my-8  text-primary">
             <button className="bg-support flex flex-row  rounded-full py-2 px-3 hover:bg-tertiary">
+              <Link  to={`/edit/${postInfo._id}`}>
               <span>
                 {" "}
                 {userInfo.id === postInfo.author._id && (
-                  <div className="edit-row  ">
-                    <Link className="edit-btn" to={`/edit/${postInfo._id}`}>
+                  <div >
+                    
                       Edit this post
-                    </Link>
+                    
                   </div>
                 )}
               </span>
@@ -100,7 +101,9 @@ export default function PostPage() {
                   clip-rule="evenodd"
                 ></path>
               </svg>
+              </Link>
             </button>
+            
           </div>
           <div class="flex items-center justify-between pt-2">
             <div class="flex space-x-2">

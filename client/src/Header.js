@@ -60,11 +60,30 @@ export default function Header({ search, setSearch }) {
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             {username ? (
               <>
-                <div>
-                  <div>
-                    <Link to="/create">Create +</Link>
+                <div className="flex flex-row gap-9">
+                  <div className="relative">
+                    <AiOutlineSearch className="text-primary absolute top-4 left-4" />
+                    <input
+                      type="text"
+                      className="bg-white h-full text-primary w-full px-12 rounded-lg focus:outline-none hover:cursor-pointer"
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                    />
                   </div>
-                  <a onClick={logout}>Logout ({username})</a>
+                  <div className="mt-2">
+                    <Link
+                      to="/create"
+                      className="rounded px-5 py-2.5 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-rose-400 hover:to-rose-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-rose-400 transition-all ease-out duration-300"
+                    >
+                      Create +
+                    </Link>
+                  </div>
+                  <a
+                    onClick={logout}
+                    className=" rounded px-5 py-2.5 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-rose-400 hover:to-rose-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-rose-400 transition-all ease-out duration-300"
+                  >
+                    Logout ({username})
+                  </a>
                 </div>
               </>
             ) : (
