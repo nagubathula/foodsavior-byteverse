@@ -70,7 +70,7 @@ export default function IndexPage({ searchTerm }) {
                   </a>
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                    href="#receipe"
                     className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-100"
                   >
                     Discover
@@ -123,7 +123,10 @@ export default function IndexPage({ searchTerm }) {
                 Our Mission
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-300">
-              Our mission is to promote sustainable cooking practices and reduce food waste. We believe that by educating and inspiring our readers, we can make a positive impact on the environment and help create a more sustainable future.
+                Our mission is to promote sustainable cooking practices and
+                reduce food waste. We believe that by educating and inspiring
+                our readers, we can make a positive impact on the environment
+                and help create a more sustainable future.
               </p>
             </div>
           </div>
@@ -186,15 +189,25 @@ export default function IndexPage({ searchTerm }) {
           </div>
         </div>
         <div>
-          <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col items-center justify-between pb-4 border-b border-gray-300">
+          <div
+            id="receipe"
+            className="my-6 lg:my-12 container px-6 mx-auto flex flex-col items-center justify-between pb-4 border-b border-gray-300"
+          >
             <h1 className="text-primary text-4xl font-bold flex justify-center mt-10 lg:mt-24 lg:mb-5">
               RECIPIES
             </h1>
             <div className=" flex grid grid-cols-3 gap-2">
               {posts.length > 0 &&
                 posts
-                  .filter((post) =>
-                    post.title.toLowerCase().includes(searchTerm.toLowerCase())
+                  .filter(
+                    (post) =>
+                      post.title
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase()),
+                    (post) =>
+                      post.title
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase())
                   )
                   .map((post) => <Post {...post} />)}
             </div>
