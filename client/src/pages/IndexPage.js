@@ -201,7 +201,7 @@ export default function IndexPage({ searchTerm }) {
           </div>
         </div>
       </div>
-      S
+      
     </>
   );
 }
