@@ -29,7 +29,7 @@ export default function Post({
               <h2>{title}</h2>
             </Link>
           </div>
-          <p class="text-gray-700 text-base">{summary}</p>winter
+          <p class="text-gray-700 text-base">{summary}</p>
         </div>
 
         <div class="text-right pt-4 pb-2">
