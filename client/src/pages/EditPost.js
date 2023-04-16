@@ -93,7 +93,7 @@ export default function EditPost() {
                   htmlFor="username"
                   className="block text-sm font-medium leading-6 text-primary"
                 >
-                  Username
+                Title
                 </label>
                 <div className="mt-2">
                   <div className="flex rounded-xl  border border-primary mb-2  sm:max-w-md">

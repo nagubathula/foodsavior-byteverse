@@ -7,6 +7,7 @@ export default function Post({
   summary,
   cover,
   content,
+  category,
   createdAt,
   author,
 }) {
@@ -34,14 +35,9 @@ export default function Post({
 
         <div class="text-right pt-4 pb-2">
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #potato
+            #{category}
           </span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #salt
-          </span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #oil
-          </span>
+          
         </div>
         <div className="text-sm text-right mr-2 my-2 text-primary">
           <p className="info">

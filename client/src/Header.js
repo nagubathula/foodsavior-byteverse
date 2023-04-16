@@ -32,7 +32,7 @@ export default function Header({ search, setSearch }) {
           <Link to="/" className="flex items-center">
             {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> */}
             <span className="self-center text-4xl font-semibold whitespace-nowrap">
-              FoodSavior
+              Savory Delights
             </span>
           </Link>
           <button
