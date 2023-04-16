@@ -2,7 +2,6 @@ import Post from "../Post";
 import { useEffect, useState } from "react";
 
 export default function IndexPage({ searchTerm }) {
-  
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     fetch("http://localhost:4000/post").then((response) => {
@@ -11,7 +10,19 @@ export default function IndexPage({ searchTerm }) {
       });
     });
   }, []);
-  
+  const links = [
+    { name: 'Open roles', href: '#' },
+    { name: 'Internship program', href: '#' },
+    { name: 'Our values', href: '#' },
+    { name: 'Meet our leadership', href: '#' },
+  ]
+  const stats = [
+    { name: 'Offices worldwide', value: '12' },
+    { name: 'Full-time colleagues', value: '300+' },
+    { name: 'Hours per week', value: '40' },
+    { name: 'Paid time off', value: 'Unlimited' },
+  ]
+
   return (
     <>
       <div className="flex flex-col ">
@@ -76,11 +87,52 @@ export default function IndexPage({ searchTerm }) {
             </div>
           </section>
         </div>
+        <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+          <img
+            src="https://www.cypressgreen.in/blog/wp-content/uploads/2021/03/food.jpg"
+            alt=""
+            className="absolute inset-0 -z-10 h-full w-full object-cover object-right opacity-30 md:object-center"
+          />
+          <div
+            className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+            aria-hidden="true"
+          >
+            <div
+              className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+              style={{
+                clipPath:
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+              }}
+            />
+          </div>
+          <div
+            className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+            aria-hidden="true"
+          >
+            <div
+              className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+              style={{
+                clipPath:
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+              }}
+            />
+          </div>
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                Our Mission
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+              Our mission is to promote sustainable cooking practices and reduce food waste. We believe that by educating and inspiring our readers, we can make a positive impact on the environment and help create a more sustainable future.
+              </p>
+            </div>
+          </div>
+        </div>
         {/* Page title starts */}
         <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between pb-4 border-b border-gray-300">
           <div>
             <h4 className="text-2xl font-bold leading-tight text-primary">
-              Category
+              Categories
             </h4>
           </div>
         </div>
@@ -143,7 +195,6 @@ export default function IndexPage({ searchTerm }) {
                 posts
                   .filter((post) =>
                     post.title.toLowerCase().includes(searchTerm.toLowerCase())
-                    
                   )
                   .map((post) => <Post {...post} />)}
             </div>

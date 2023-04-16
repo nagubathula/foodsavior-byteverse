@@ -89,7 +89,7 @@ export default function Header({ search, setSearch }) {
             ) : (
               <>
                 <div className="flex flex-row gap-4">
-                  <div className="relative">
+                  <div className="relative drop-shadow-lg">
                     <AiOutlineSearch className="text-primary absolute top-4 left-4" />
                     <input
                       type="text"
@@ -101,14 +101,14 @@ export default function Header({ search, setSearch }) {
 
                   <Link
                     to="/login"
-                    className="relative rounded px-5 py-2.5 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-rose-400 hover:to-rose-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-rose-400 transition-all ease-out duration-300"
+                    className="relative rounded px-5 py-2.5 drop-shadow-lg overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-rose-400 hover:to-rose-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-rose-400 transition-all ease-out duration-300"
                   >
                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                     <span className="relative">Login</span>
                   </Link>
                   <Link
                     to="/register"
-                    className="relative rounded px-5 py-2.5 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-rose-400 hover:to-rose-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-rose-400 transition-all ease-out duration-300"
+                    className="relative rounded px-5 py-2.5 drop-shadow-lg overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-rose-400 hover:to-rose-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-rose-400 transition-all ease-out duration-300"
                   >
                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                     <span className="relative">Register</span>
